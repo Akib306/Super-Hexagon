@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqrvq0djeclnc"]
+[gd_scene load_steps=8 format=3 uid="uid://bqrvq0djeclnc"]
 
 [ext_resource type="Shader" path="res://Main Scene.gdshader" id="1_ehfkh"]
 [ext_resource type="Texture2D" uid="uid://8n8a1vm03jik" path="res://circle.png" id="2_reji1"]
 [ext_resource type="Script" path="res://player.gd" id="2_xdm2c"]
 [ext_resource type="PackedScene" uid="uid://kxyod1gqrpe8" path="res://obstacle.tscn" id="4_3wtsb"]
+[ext_resource type="Script" path="res://spawn_manager.gd" id="5_vlwac"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ebpsb"]
 shader = ExtResource("1_ehfkh")
@@ -39,3 +40,8 @@ shape = SubResource("CircleShape2D_80ijt")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Obstacle" parent="." instance=ExtResource("4_3wtsb")]
+
+[node name="SpawnManager" type="Node2D" parent="." node_paths=PackedStringArray("target_node")]
+script = ExtResource("5_vlwac")
+obstacle_scene = ExtResource("4_3wtsb")
+target_node = NodePath("..")

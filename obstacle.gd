@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 class_name Obstacle
 
-var shrink_speed = 1.0
+var shrink_speed = 2.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
