@@ -13,7 +13,7 @@ func _ready() -> void:
 	next_time_to_spawn = Time.get_unix_time_from_system() + (1.0/spawn_rate)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if Time.get_unix_time_from_system() >= next_time_to_spawn:
 		var new_obstacle := obstacle_scene.instantiate()
 		target_node.add_child(new_obstacle)

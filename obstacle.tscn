@@ -8,6 +8,7 @@ script = ExtResource("1_w08bs")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 build_mode = 1
 polygon = PackedVector2Array(-63, -87, -107, 0, -59, 95, 60, 95, 107, 0, 63, -87, 36, -73, 73, 0, 41, 65, -41, 65, -73, 0, -36, -73)
+one_way_collision_margin = 0.0
 
 [node name="Line2D" type="Line2D" parent="CollisionPolygon2D"]
 points = PackedVector2Array(-50, -80, -90, 0, -50, 80, 50, 80, 90, 0, 50, -80)

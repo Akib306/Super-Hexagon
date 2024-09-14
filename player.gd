@@ -7,8 +7,10 @@ class_name Player
 func _ready() -> void:
 	$PlayerSprite/Area2D.body_entered.connect(_on_body_entered)
 
+# For collision detection
 func _on_body_entered(body:Node2D) -> void:
 	print(body)
+	print("Collision detected with: ", body.name) # for debugging
 	get_tree().change_scene_to_file("res://Main Scene.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
